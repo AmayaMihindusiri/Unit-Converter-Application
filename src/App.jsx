@@ -29,6 +29,8 @@ const unitPairs = [
   { id: "ms-kmh", label: "m/s → Km/h" },
 ];
 
+import { useEffect, useState } from "react";
+
 function App() {
   const [value, setValue] = useState("");
   const [pair, setPair] = useState("m-km");
@@ -120,6 +122,42 @@ function App() {
           >
             ↔
           </button>
+
+          {result && (
+            <div className="text-center font-medium text-slate-700">
+              {result}
+            </div>
+          )}
+        </div>
+
+        {/* History */}
+        <div>
+          <div className="flex justify-between items-center mb-2">
+            <h2 className="font-semibold text-slate-700">History</h2>
+            {history.length > 0 && (
+              <button
+                onClick={clearHistory}
+                className="text-sm text-red-500 hover:underline"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+
+          {history.length === 0 ? (
+            <p className="text-sm text-slate-400">No conversions yet</p>
+          ) : (
+            <ul className="space-y-2 max-h-40 overflow-y-auto">
+              {history.map((item) => (
+                <li
+                  key={item.id}
+                  className="text-sm bg-slate-100 rounded px-2 py-1"
+                >
+                  {item.output}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Result */}
