@@ -16,6 +16,8 @@ function App() {
       setHistory(storedHistory);
     }
   }, []);
+  const [result, setResult] = useState(null);
+
 
   const convert = () => {
     const num = parseFloat(value);
