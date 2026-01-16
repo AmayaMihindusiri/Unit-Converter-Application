@@ -1,32 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Unit Converter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<h1>Unit Converter</h1>
-
-<select id="type" onchange="updateUnits()">
-    <option value="length">Length</option>
-    <option value="weight">Weight</option>
-    <option value="temperature">Temperature</option>
-</select>
-
-<input type="number" id="inputValue" placeholder="Enter value">
-
-<select id="fromUnit"></select>
-<select id="toUnit"></select>
-
-<button onclick="convert()">Convert</button>
-
-<h2 id="result"></h2>
-
-<h3>Conversion History</h3>
-<ul id="history"></ul>
-
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unit-converter-devops-assignment</title>
+    <link href="/src/App.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
