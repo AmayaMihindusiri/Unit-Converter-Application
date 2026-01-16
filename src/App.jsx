@@ -67,6 +67,11 @@ function App() {
     localStorage.setItem("history", JSON.stringify(updated));
   }, [result]);
 
+  const clearHistory = () => {
+    localStorage.removeItem("history");
+    setHistory([]);
+  };
+
   const swapUnits = () => {
     const [a, b] = pair.split("-");
     const swapped = `${b}-${a}`;
@@ -127,6 +132,13 @@ function App() {
             </div>
           )}
         </div>
+        
+        {/* Result */}
+        {result && (
+          <div className="text-center text-xl font-semibold text-blue-700">
+            {result}
+          </div>
+        )}
 
         {/* History */}
         <div>
@@ -141,29 +153,7 @@ function App() {
               </button>
             )}
           </div>
-
-          {history.length === 0 ? (
-            <p className="text-sm text-slate-400">No conversions yet</p>
-          ) : (
-            <ul className="space-y-2 max-h-40 overflow-y-auto">
-              {history.map((item) => (
-                <li
-                  key={item.id}
-                  className="text-sm bg-slate-100 rounded px-2 py-1"
-                >
-                  {item.output}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
-
-        {/* Result */}
-        {result && (
-          <div className="text-center text-xl font-semibold text-blue-700">
-            {result}
-          </div>
-        )}
 
         {/* Favorites */}
         <button
