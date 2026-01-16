@@ -9,13 +9,11 @@ The application supports **real-time unit conversions**, persistent history, and
 
 ## 👥 Group Information
 
-- **Student 1:** Amaya Mihindusiri    
+- **Student 1:** P.A.A.H. MIHINDUSIRI - ITBIN-0065 
   **Role:** DevOps Engineer
 
-- **Student 2:** Mishara Kavindya    
+- **Student 2:** ISHARA MADUSHANI - ITBIN-0058 
   **Role:** Frontend Developer
-
-> ⚠️ Replace the student IDs **exactly as shown in LMS** before submission.
 
 ---
 
